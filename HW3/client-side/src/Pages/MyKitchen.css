@@ -1,0 +1,14 @@
+.list{
+  display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recipe{
+  padding: 10px;
+    margin: 10px;
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px #888;
+}
