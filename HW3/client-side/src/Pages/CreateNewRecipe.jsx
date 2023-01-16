@@ -4,9 +4,20 @@ import NewRecipeForm from "../Forms/NewRecipeForm";
 
 
 const CreateNewRecipe = (props) => {
+    const saveNewRecipeHandler = (enteredNewRecipe) => {
+      const newRecipe = {
+        ...enteredNewRecipe,
+        id: Math.random().toString(),
+      };
+      console.log("New arry of recipes" + newRecipe);
+      props.onAddRecipe(newRecipe);
+    };
+    
+    
+
   return (
     <Card>
-      <NewRecipeForm />
+      <NewRecipeForm onSaveRecipeClick={saveNewRecipeHandler} />
     </Card>
   );
 };

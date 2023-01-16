@@ -12,22 +12,22 @@ const NewRecipeForm = (props) => {
   const recipeNameHandler = (e) => {
     console.log(e.target.value);
     setRecipeName(e.target.value);
-  };
+  }; // setting recipe name
 
   const cookingMethodHandler = (e) => {
     console.log(e.target.value);
     setCookingMethod(e.target.value);
-  };
+  }; // setting cooking method
 
   const cookingTimeHandler = (e) => {
     console.log(e.target.value);
     setCookingTime(e.target.value);
-  };
+  }; // setting cooking time time
 
   const enteredURLHandler = (e) => {
     console.log(e.target.value);
     setImageUrl(e.target.value);
-  };
+  }; // setting the image url
 
   const submitHandler = (e) => {
     const newRecipe = {
@@ -37,7 +37,8 @@ const NewRecipeForm = (props) => {
       image: enteredImageUrl,
     };
     console.log(newRecipe);
-  };
+    props.onSaveRecipeClick(newRecipe); // this sending the new info to CreateNewrRecipe - I hope so...
+  }; // sending an object with all the data for recipe - need to connect this to the arry.
 
   const resetTextHandler = () => {
     setRecipeName("");

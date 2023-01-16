@@ -26,6 +26,7 @@ const InitRec = [
   },
 ];
 
+
 export default class CCRecipes extends Component {
   constructor(props) {
     super(props);
@@ -34,6 +35,8 @@ export default class CCRecipes extends Component {
       prepared: [],
       counter: InitRec.length,
     };
+
+
   }
 
   render() {
@@ -48,12 +51,12 @@ export default class CCRecipes extends Component {
     ));
 
     return (
-      <Card>
+      <>
+        <div style={{ fontSize: 20, color: "black" }}>Recipes:</div>
         <div>
-          <div style={{ fontSize: 20, color: "black" }}>Recipes:</div>
-          <div>{recStr}</div>
+          <Card>{recStr}</Card>
         </div>
-      </Card>
+      </>
     );
   }
 }

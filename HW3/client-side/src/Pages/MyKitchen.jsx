@@ -6,7 +6,7 @@ import CCRecipes from "../ClassComponents/CCRecipes";
 const MyKitchen = (props) => {
   return (
     <Card className="recipe">
-      <CCRecipes />
+      <CCRecipes  />
     </Card>
   );
 };

@@ -5,11 +5,11 @@ import Card from "./UI/Card";
 
 function App(props) {
   return (
-    <Card >
+    
       <div>
         <NavaMenu />
       </div>
-    </Card>
+    
   );
 }
 
