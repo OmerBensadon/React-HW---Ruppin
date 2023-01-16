@@ -37,7 +37,7 @@ export default function FormNewIngredient() {
     };
     console.log(newIngriden);
     resetTextHandler();
-  }; // I'm here --> still dont getting an object from this function
+  }; // I'm here --> still dont getting an object from this function - but why?!?(Fixed)
 
   return (
     <>
