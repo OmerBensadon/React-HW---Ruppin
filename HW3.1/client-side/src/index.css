@@ -1,13 +1,94 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.card {
+  border-radius: 12px;
+  border: 1px solid #40005d;
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  width: 50rem;
+}
+
+.menu-Button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #40005d;
+  background-color: #c3b9c7;
+  color: white;
+  border-radius: 12px;
+  /* margin-right: 1rem; */
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-New-ingriden_Recipe {
+  padding: 1rem;
+  background-color: #c3b9c7;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+.form button {
+  font: inherit;
+  border-radius: 12px;
+  border: 1px solid #40005d;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem;
+  background-color: #40005d;
+  color: white;
+  margin-right: 1rem;
+  /* width: 50rem; */
+  max-width: 95%;
+}
+.form-Button-Card {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #40005d;
+  background-color: #c3b9c7;
+  color: white;
+  border-radius: 12px;
+  /* margin-right: 1rem; */
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.form__control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.form__control input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
 }
