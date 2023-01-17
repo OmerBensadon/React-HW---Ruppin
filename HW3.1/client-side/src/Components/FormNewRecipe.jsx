@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+const apiUrl = "https://localhost:44374/api/recipes/"; // this is the server name and connection
 export default function FormNewRecipe(props) {
   const [enteredRecipeName, setRecipeName] = useState("");
   const [enteredCookingMethod, setCookingMethod] = useState("");
@@ -36,6 +36,8 @@ export default function FormNewRecipe(props) {
     };
     console.log(newRecipe);
     resetTextHandler();
+    
+
   }; // sending an object with all the data for recipe - need to connect this to the arry.
 
   const resetTextHandler = () => {
