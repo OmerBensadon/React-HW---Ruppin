@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication-ServerSide", "WebApplication-ServerSide\WebApplication-ServerSide.csproj", "{8608E05F-1C60-49B8-8110-4D83C4246566}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary-Kitchen", "ClassLibrary-Kitchen\ClassLibrary-Kitchen.csproj", "{5AB68FDC-4865-4901-BE7E-6690FD8F2E3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8608E05F-1C60-49B8-8110-4D83C4246566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8608E05F-1C60-49B8-8110-4D83C4246566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8608E05F-1C60-49B8-8110-4D83C4246566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8608E05F-1C60-49B8-8110-4D83C4246566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AB68FDC-4865-4901-BE7E-6690FD8F2E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB68FDC-4865-4901-BE7E-6690FD8F2E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB68FDC-4865-4901-BE7E-6690FD8F2E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB68FDC-4865-4901-BE7E-6690FD8F2E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B7E2CB1-49B4-485D-A4F0-EB16BB4CC944}
+	EndGlobalSection
+EndGlobal

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 export default function FormNewIngredient() {
   // those useState are setting the value from the input
   const [enteredName, setEnteredName] = useState("");
@@ -20,7 +21,7 @@ export default function FormNewIngredient() {
     console.log("entered calories " + e.target.value);
     setCalories(e.target.value);
   };
-  // setting the caloties
+  // setting the calories
 
   const resetTextHandler = () => {
     setEnteredName("");
@@ -37,6 +38,8 @@ export default function FormNewIngredient() {
     };
     console.log(newIngriden);
     resetTextHandler();
+
+
   }; // I'm here --> still dont getting an object from this function - but why?!?(Fixed)
 
   return (
