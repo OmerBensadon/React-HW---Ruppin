@@ -10,11 +10,11 @@ export default function MyKitchen(props) {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json; charset=UTF-8",
-        Accept: "application/json; charset=UTF-8",
+        'Accept': "application/json; charset=UTF-8",
       }),
     })
       .then((response) => {
-        console.log("response=", response);
+        console.log("response =", response);
         console.log("response.status", response.status);
         console.log("response.ok", response.ok);
         return response.json();
@@ -29,8 +29,7 @@ export default function MyKitchen(props) {
         (error) => {
           console.log("err post=", error);
         }
-      );
-  }, []); // this is Get() --> calling the recipes data from the Server
+      ); }, []); // this is Get() --> calling the recipes data from the Server
   useEffect(() => {
     fetch(apiUrlIngredients, {
       method: "GET",

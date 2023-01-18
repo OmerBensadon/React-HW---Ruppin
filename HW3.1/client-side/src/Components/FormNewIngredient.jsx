@@ -83,7 +83,7 @@ export default function FormNewIngredient() {
       <div className="form-Button-Card">
         <div className="form button">
           <button onClick={resetTextHandler}>Cancel</button>
-          <button onClick={submitHandler}>Add ingriden</button>
+          <button onClick={submitHandler}>Add Ingredient</button>
         </div>
       </div>
     </>

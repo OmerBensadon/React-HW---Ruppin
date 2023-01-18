@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import FormNewRecipe from "../Components/FormNewRecipe";
 
-export default function CreateNewRecipe(props) {
+
+
+export default function CreateNewRecipe() {
+
   return (
     <div>
       <FormNewRecipe />

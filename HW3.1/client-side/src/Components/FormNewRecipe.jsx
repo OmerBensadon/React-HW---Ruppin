@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-const apiUrl = "https://localhost:44374/api/recipes/"; // this is the server name and connection
+
+const apiUrlRecipes = "https://localhost:44374/api/recipes/"; // this is the server name and connection for recipes
+
 export default function FormNewRecipe(props) {
   const [enteredRecipeName, setRecipeName] = useState("");
   const [enteredCookingMethod, setCookingMethod] = useState("");
@@ -29,16 +31,35 @@ export default function FormNewRecipe(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     const newRecipe = {
-      name: enteredRecipeName,
-      method: enteredCookingMethod,
-      time: enteredCookingTime,
-      image: enteredImageUrl,
+      Name: enteredRecipeName,
+      CookingMethod: enteredCookingMethod,
+      Time: enteredCookingTime,
+      Image: enteredImageUrl,
     };
     console.log(newRecipe);
     resetTextHandler();
-    
-
-  }; // sending an object with all the data for recipe - need to connect this to the arry.
+    fetch(apiUrlRecipes, {
+      method: "POST",
+      body: JSON.stringify(newRecipe),
+      headers: new Headers({
+        "Content-type": "application/json; charset=UTF-8", //very important to add the 'charset=UTF-8'!!!!
+        'Accept': "application/json; charset=UTF-8",
+      }),
+    })
+      .then((response) => {
+        console.log("response=", response);
+        return response.json();
+      })
+      .then(
+        (result) => {
+          console.log("fetch POST= ", result);
+          console.log(result.Avg);
+        },
+        (error) => {
+          console.log("err post=", error);
+        }
+      );
+  }; // Sending an object with all the data for recipe.
 
   const resetTextHandler = () => {
     setRecipeName("");
@@ -97,7 +118,7 @@ export default function FormNewRecipe(props) {
       <div className="form-Button-Card">
         <div className="form button">
           <button onClick={resetTextHandler}>Cancel</button>
-          <button onClick={submitHandler}>Add ingriden</button>
+          <button onClick={submitHandler}>Add Recipe</button>
         </div>
       </div>
     </>
