@@ -79,7 +79,7 @@ export default function MyKitchen(props) {
    // Those two are maping the arrys so it will be more clean to render them
   return (
     <>
-      <div className="card">
+      <div className="card1">
         <h1 style={{ textAlign: "center" }}>Recipes</h1>
         <div>{recStr}</div>
       </div>

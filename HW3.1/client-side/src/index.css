@@ -17,6 +17,18 @@ code {
   padding: 1rem 2rem;
   margin: 2rem auto;
   width: 50rem;
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* align-items: center;*/
+
+  /*justify-content: center; */
+}
+.card1 {
+  border-radius: 12px;
+  border: 1px solid #40005d;
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  width: 70rem;
 }
 
 .menu-Button {
@@ -43,6 +55,7 @@ code {
   max-width: 95%;
   border-radius: 12px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+
 }
 .form button {
   font: inherit;

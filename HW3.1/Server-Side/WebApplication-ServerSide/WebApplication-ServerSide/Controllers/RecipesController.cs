@@ -10,7 +10,7 @@ using System.Text;
 
 namespace WebApplication_ServerSide.Controllers
 {
-    //[EnableCors]
+    ///api/recipes/
     public class RecipesController : ApiController
     {
         public IEnumerable<Recipe> Get()

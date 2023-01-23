@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+const apiUrlIngriden = "https://localhost:44374/api/ingredients/"; // this is the server name and connection for Ingredients
 
 export default function FormNewIngredient() {
   // those useState are setting the value from the input
@@ -38,7 +39,27 @@ export default function FormNewIngredient() {
     };
     console.log(newIngriden);
     resetTextHandler();
-
+fetch(apiUrlIngriden, {
+  method: "POST",
+  body: JSON.stringify(newIngriden),
+  headers: new Headers({
+    "Content-type": "application/json; charset=UTF-8", //very important to add the 'charset=UTF-8'!!!!
+    Accept: "application/json; charset=UTF-8",
+  }),
+})
+  .then((response) => {
+    console.log("response=", response);
+    return response.json();
+  })
+  .then(
+    (result) => {
+      console.log("fetch POST= ", result);
+      console.log(result.Avg);
+    },
+    (error) => {
+      console.log("err post=", error);
+    }
+  );
 
   }; // I'm here --> still dont getting an object from this function - but why?!?(Fixed)
 

@@ -1,16 +1,19 @@
-﻿using KitchenDataBase;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using KitchenDataBase;
+using System.Text;
+
 
 namespace WebApplication_ServerSide.Controllers
 {
     public class IngredientsController : ApiController
     {
+        ///api/Ingredients/
         public IEnumerable<Ingredient> Get()
         {
             using (KitchenEntities db = new KitchenEntities())
@@ -18,18 +21,18 @@ namespace WebApplication_ServerSide.Controllers
                 return db.Ingredients.ToList();
             }
         }
-                public HttpResponseMessage Post([FromBody] Recipe recipe)
+                public HttpResponseMessage Post([FromBody] Ingredient ingredient)
         {
             try
             {
                 using (KitchenEntities db = new KitchenEntities())
                 {
-                    db.Recipes.Add(recipe);
+                    db.Ingredients.Add(ingredient);
                     db.SaveChanges();
-                    //return Created(new Uri(Request.RequestUri.AbsolutePath+recipe.Id), recipe);
+                    //return Created(new Uri(Request.RequestUri.AbsolutePath+ingredient.Id), ingredient);
 
-                    var message = Request.CreateResponse(HttpStatusCode.Created, recipe);
-                    message.Headers.Location = new Uri(Request.RequestUri + recipe.Id.ToString());
+                    var message = Request.CreateResponse(HttpStatusCode.Created, ingredient);
+                    message.Headers.Location = new Uri(Request.RequestUri + ingredient.Id.ToString());
                     return message;
                 }
             }
